@@ -1,0 +1,253 @@
+    1  cd ~
+    2  ls
+    3  ssh-keygen 
+    4  ssh-copy-id ansible1
+    5  ssh ansible1
+    6  exit
+    7  ls
+    8  yum install git
+    9  sudo yum install git
+   10  https://github.com/sandervanvugt/handson-ansible
+   11  git clone https://github.com/sandervanvugt/handson-ansible
+   12  ls
+   13  cd handson-ansible/
+   14  ls
+   15  cd install/
+   16  ls
+   17  vi vsftpd.yml 
+   18  ls
+   19  ansible-playbook vsftpd.yml 
+   20  ls
+   21  cd ..
+   22  ls
+   23  cd ..
+   24  ls
+   25  ansible-playbook /home/ansible/handson-ansible/install/vsftpd.yml 
+   26  ls
+   27  ansible-doc user
+   28  ls
+   29  cd handson-ansible/
+   30  ls
+   31  cd base/
+   32  s
+   33  ks
+   34  ls
+   35  cd ..
+   36  ls
+   37  cd ftp/
+   38  ls
+   39  vi vsftpd.yml 
+   40  ls
+   41  cd ..
+   42  ls
+   43  cd includes/
+   44  ls
+   45  cd tasks/
+   46  ls
+   47  cd ..
+   48  ls
+   49  cd ..
+   50  ls
+   51  cd install/
+   52  ls
+   53  cd ..
+   54  ls
+   55  cd ~
+   56  ;s
+   57  ls
+   58  git clone https://github.com/uphillian/puppet6.git
+   59  ls
+   60  cd puppet6/
+   61  ls
+   62  ssh-copy-id ansible1
+   63  ssh-copy-id ansible2
+   64  ls
+   65  vi ansible.cfg
+   66  vi inventory
+   67  cat inventory 
+   68  cat ansible.cfg 
+   69  ansible all -m command -a "useradd segun"
+   70  ansible-doc -l
+   71  ansible-doc -l | wc
+   72  ansible-doc -l | grep user
+   73  ansible ansible1 -m user -a "name=vikman shell=/bin/bash"
+   74  ls
+   75  cd ~
+   76  ls
+   77  cd handson-ansible/
+   78  ls
+   79  cd ~
+   80  ls
+   81  ansible all -i inventory --list-hosts
+   82  ansible all inventory -m command -a "useradd titi"
+   83  ansible-doc -l wc
+   84  ansible-doc wc
+   85  ansible-doc user
+   86  ansible all -m command -a "id ansible"
+   87  ansible all -m command -a "ps -aux | grep httpd"
+   88  ansible all -m user -a "id ansible"
+   89  ansible all -m command -a "id ansible"
+   90  ls
+   91  cd handson-ansible/
+   92  ls
+   93  cd base/
+   94  ls
+   95  cd ..
+   96  ls
+   97  cd ftp/
+   98  ls
+   99  ansible-playbook vsftpd.yml 
+  100  cat vsftpd.yml 
+  101  ping ansibe1
+  102  ping ansible1
+  103  ping ansible2
+  104  ls
+  105  ansible-playbook vsftpd.yml 
+  106  ls
+  107  cat inventory 
+  108  vi inventory 
+  109  ansible-playbook vsftpd.yml 
+  110  cat vsftpd.yml 
+  111  ansible-doc package
+  112  ls
+  113  ansible-doc service
+  114  ansible-doc firewalld
+  115  ansible ansible1 -m setup
+  116  cd ~
+  117  ls
+  118  cp /etc/hosts .
+  119  ls
+  120  cat hosts 
+  121  cp /etc/host.conf 
+  122  cp /etc/host.conf .
+  123  ls
+  124  cat host.conf 
+  125  ln hosts host_hard
+  126  ls
+  127  ln -s hosts host_soft
+  128  ls
+  129  top
+  130  ps aux
+  131  ps aux | grep root
+  132  ps aux | less
+  133  top
+  134  ls
+  135  su - root
+  136  ls
+  137  ansible all -m command id
+  138  ansible all -m command -a id
+  139  ansible all -m command -a ping 
+  140  ansible all -m command -a 'ping'
+  141  ansible-doc user
+  142  ansible-doc yum
+  143  ansible-doc -l
+  144  ansible-doc -l | grep user
+  145  ansible-doc -l | grep ftp
+  146  ansible-doc -l | grep vsftp
+  147  ansible-doc -l | grep http
+  148  ansible-doc -l | grep ^http
+  149  ansible-doc -l | grep ^'http'
+  150  ansible-doc -l | grep http
+  151  ansible-doc -l | grep yum
+  152  ansible-doc -l | firewall
+  153  ansible-doc -l | grep  firewall
+  154  ansible-doc firewalld 
+  155  ansible ansible1 -m setup -i inventory
+  156  ansible ansible1 -m setup - inventory
+  157  ansible-doc -l
+  158  ansible-doc -l | grep user
+  159  ansible-doc user
+  160  ls
+  161  ansible-doc docker_container
+  162  sudo pip install boto
+  163  sudo yum install pip
+  164  sudo yum install pip3
+  165  ansible-doc -l | grep azure
+  166  ls
+  167  cd /home/vagrant/
+  168  suudo /home/vagrant/
+  169  sudo /home/vagrant/
+  170  sudo cd  /home/vagrant/
+  171  ls
+  172  su - root
+  173  ls
+  174  sudo rm -rf host_soft 
+  175  sudo rm -rf host_hard
+  176  sudo rm -rf host_conf
+  177  ls
+  178  echo "# Configuration-Management-with-Ansible" >> README.md
+  179  git init
+  180  git add README.md
+  181  git commit -m "setup"
+  182  git remote add origin https://github.com/bolof2000/Configuration-Management-with-Ansible.git
+  183  git push -u origin master
+  184  sudo git push -u origin master
+  185  sudo git push -u origin master --force
+  186  sudo git push origin master -f
+  187  su root
+  188  ls
+  189  rm -rf README.md
+  190  ls
+  191  mkdir Automation_with_ansible
+  192  cd Automation_with_ansible/
+  193  ls
+  194  echo "# Configuration-Management-with-Ansible" >> README.md
+  195  git init
+  196  git add README.md 
+  197  git commit -m "setup"
+  198  git config --global user.email "bolofindeolusegun@yahoo.com"
+  199  git config --global user.name "bolof2000"
+  200  git commit -m "setup"
+  201  git remote add origin https://github.com/bolof2000/Configuration-Management-with-Ansible.git
+  202  git push -u origin master
+  203  ls
+  204  vim cleanup.yaml
+  205  vi cleanup.yaml
+  206  ls
+  207  vi create_user_group.yaml
+  208  ls
+  209  gitt status
+  210  git status
+  211  git add .
+  212  git -m commit "playbooks"
+  213  git status
+  214  git commit -m "playbook"
+  215  git push 
+  216  ls
+  217  vi README.md 
+  218  ls
+  219  git status
+  220  git add .
+  221  git commit -m "modified readme""
+  222  git commit -m "modified readme"
+  223  git push
+  224  ls
+  225  cd Automation_with_ansible/
+  226  ls
+  227  git status
+  228  cd ..
+  229  ls
+  230  ansible al -i inventory -m ping 
+  231  ansible all -i inventory -m ping 
+  232  ansible all -i ansible -m ping 
+  233  ansible all -i ansible1 -m ping 
+  234  ping ansible1
+  235  cat inventory 
+  236  ls
+  237  vi inventory 
+  238  ansible all -i ansible1 -m ping 
+  239  ansible all -i inventory -m ping 
+  240  ansible-doc ping
+  241  ansible-doc user
+  242  ansible-doc command
+  243  ansible all -i inventory -m command --args 'ps aux | sshd' 
+  244  ansible all -i inventory -m command --args 'ps -aux | sshd' 
+  245  ansible all -i inventory -m command --args 'top' 
+  246  ansible all -i inventory -m command --args 'uptime' 
+  247  ansible all -i inventory -m command --args 'vmstat' 
+  248  ls
+  249  ansible -i inventory -m command --args 'touch test1'
+  250  ansible all -i inventory -m command --args 'touch test1'
+  251  ansible all -i inventory -m command --args 'ls -lrt'
+  252  history
+  253  history > adhoc_commands
